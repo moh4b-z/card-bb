@@ -1,10 +1,10 @@
 'use sticpt'
 
 const disciplinas = [
-    {name: 'PPDM', img: 'icons_facebook.png'},
-    {name: 'PRO', img: 'icons_google.png'},
-    {name: 'PWBE', img: 'icons_instagram.png'},
-    {name: 'PWFE', img: 'icons_mail.png'}
+    {name: 'PPDM', img: 'icons_facebook.png', color: '#ffc0cb'},
+    {name: 'PRO', img: 'icons_google.png', color: '#ff0000'},
+    {name: 'PWBE', img: 'icons_instagram.png', color: '#0000ff'},
+    {name: 'PWFE', img: 'icons_mail.png', color: '#8a2be2'}
 ]
 
 function criarMenu(disciplina){
@@ -13,11 +13,12 @@ function criarMenu(disciplina){
     const novoSpan = document.createElement('span')
     const lista = document.getElementById('menu')
 
-    novoImagem.src = `./img/${disciplina.img}`
+    novoImagem.src = `./icon/${disciplina.img}`
     novoSpan.textContent = disciplina.name
 
     novoItem.appendChild(novoImagem)
     novoItem.appendChild(novoSpan)
+    novoItem.style = `--cor-houver: ${disciplina.color}9d;`
 
     lista.appendChild(novoItem)
 
