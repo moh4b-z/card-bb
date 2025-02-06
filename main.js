@@ -1,10 +1,10 @@
-'use stict'
+'use sticpt'
 
 const disciplinas = [
-    'PPDM',
-    'PRO',
-    'PWBE',
-    'PWFE'
+    {name: 'PPDM', img: 'icons_facebook.png'},
+    {name: 'PRO', img: 'icons_google.png'},
+    {name: 'PWBE', img: 'icons_instagram.png'},
+    {name: 'PWFE', img: 'icons_mail.png'}
 ]
 
 function criarMenu(disciplina){
@@ -13,8 +13,8 @@ function criarMenu(disciplina){
     const novoSpan = document.createElement('span')
     const lista = document.getElementById('menu')
 
-    novoImagem.src = './img/icons_facebook.png'
-    novoSpan.textContent = disciplina
+    novoImagem.src = `./img/${disciplina.img}`
+    novoSpan.textContent = disciplina.name
 
     novoItem.appendChild(novoImagem)
     novoItem.appendChild(novoSpan)
