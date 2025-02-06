@@ -1,5 +1,7 @@
 'use sticpt'
 
+// import {produtos} from "./produtos.js"
+
 const disciplinas = [
     {name: 'PPDM', img: 'icons_facebook.png', color: '#ffc0cb'},
     {name: 'PRO', img: 'icons_google.png', color: '#ff0000'},
