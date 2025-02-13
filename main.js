@@ -3,10 +3,10 @@
 import {produtos} from "./produtos.js"
 
 const disciplinas = [
-    {name: 'Touca', img: 'icons_facebook.png', tag: "Touca", color: '#ffffff'},
-    {name: 'Camisa', img: 'icons_google.png', tag: "Camisa", color: '#ffffff'},
-    {name: 'Calça', img: 'icons_instagram.png', tag: "Calca", color: '#ffffff'},
-    {name: 'Tênis', img: 'icons_mail.png', tag: "Tenis", color: '#ffffff'}
+    {name: 'Touca', img: 'icons8-touca-100.png', tag: "Touca", color: '#ffffff'},
+    {name: 'Camisa', img: 'icons8-camisa-96.png', tag: "Camisa", color: '#ffffff'},
+    {name: 'Calça', img: 'icons8-calça-96.png', tag: "Calca", color: '#ffffff'},
+    {name: 'Tênis', img: 'icons8-sapato-96.png', tag: "Tenis", color: '#ffffff'}
 ]
 const sizes = ["XS", "S", "M", "L", "XL"]
 
@@ -18,6 +18,7 @@ function criarSize(tamanhoQueExite, tamanhosQueTem, listaQueVaicolocar) {
         li.textContent = texto
         if (tamanhosQueTem.includes(texto)) {
             li.style.fontWeight = "bold"
+            li.style.color = "black"
         }
 
         ul.appendChild(li)
@@ -69,31 +70,47 @@ function filtrarCards(tag) {
 
 function criarCards(produto){
     const listaProdutos = document.getElementById('produtos')
+
     const novoCard = document.createElement('div')
     novoCard.classList.add("card")
-
     novoCard.dataset.tag = produto.tag
 
     const conteudoCard = document.createElement('div')
     conteudoCard.classList.add("conteudo")
-    novoCard.appendChild(conteudoCard)
+
     const buttonCard = document.createElement('button')
-    novoCard.appendChild(buttonCard)
 
     const h2Card = document.createElement('h2')
-    conteudoCard.appendChild(h2Card)
+
     const spanCard = document.createElement('span')
-    conteudoCard.appendChild(spanCard)
+
     const imgCard = document.createElement('img')
-    conteudoCard.appendChild(imgCard)
+
     const divCard = document.createElement('div')
-    conteudoCard.appendChild(divCard)
 
     const spanDivCard = document.createElement('span')
-    divCard.appendChild(spanDivCard)
+
     const h4DivCard = document.createElement('h4')
-    divCard.appendChild(h4DivCard)
+
     const ulDivCard = document.createElement('ul')
+    
+
+    novoCard.appendChild(conteudoCard)
+    
+    novoCard.appendChild(buttonCard)
+    
+    conteudoCard.appendChild(h2Card)
+    
+    conteudoCard.appendChild(spanCard)
+    
+    conteudoCard.appendChild(imgCard)
+    
+    conteudoCard.appendChild(divCard)
+    
+    divCard.appendChild(spanDivCard)
+    
+    divCard.appendChild(h4DivCard)
+    
     divCard.appendChild(ulDivCard)
 
     criarSize(sizes, produto.size, ulDivCard)

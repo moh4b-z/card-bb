@@ -2,7 +2,7 @@ export const produtos = {
     name: "Produtos",
     products: [
         {
-            "name": "Touca de Cérebro.png",
+            "name": "Touca de Cérebro",
             "description":"Uma touca feita tricor  que parece um cérebro",
             "image": "cerebro.png",
             "price": 30.00,
@@ -41,7 +41,7 @@ export const produtos = {
             "name": "Tênis Esportivo",
             "description":"Tênis Esportivo Masculino Ultra Light Assis Ranster",
             "image": "tenisEM.png",
-            "price": 0.00,
+            "price": 50.50,
             "size": ["M","L","XL"],
             "color": "000000",
             "tag": "Tenis"
